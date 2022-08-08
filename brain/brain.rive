@@ -1,0 +1,25 @@
+! version = 2.0
+
+// + hello bot
+// - Hello, human!
+
+// + how are you
+// - I'm great, how are you?
+// - I'm good, you?
+// - Good :) you?
+// - Great! You?
+// - I'm fine, thanks for asking!
+
+// + tell me a poem
+// - Little Miss Muffit sat on her tuffet,\n
+// ^ In a nonchalant sort of way.\n
+// ^ With her forcefield around her,\n
+// ^ The Spider, the bounder,\n
+// ^ Is not in the picture today.
++ *
+- <set username=<star>><call>getUsername<star></call>
+> object getUsername python
+import utilis
+user=utilis.save(str(args[0]))
+return "ok can you tell me your password to save"
+> object
